@@ -1,0 +1,89 @@
+---
+title: "Time Series Analysis Report"
+output: html_document
+params:
+  frequency: NA
+  summary: NA
+  order_diff: NA
+  seasonal_check: NA
+  model_info: NA
+  best_model: NA
+  residual_summary: NA
+  forecast_values: NA
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+library(ggplot2)
+library(forecast)
+```
+
+# 📈 Time Series Analysis Report
+
+------------------------------------------------------------------------
+
+## 🕒 Data Frequency
+
+**Selected Frequency:** `r params$frequency`
+
+------------------------------------------------------------------------
+
+## 📊 Time Series Summary
+
+```{r}
+cat(params$summary)
+```
+
+------------------------------------------------------------------------
+
+## 🔁 Differencing Order
+
+```{r}
+cat(params$order_diff)
+```
+
+------------------------------------------------------------------------
+
+## ❄️ Seasonality Check
+
+```{r}
+cat(params$seasonal_check)
+```
+
+------------------------------------------------------------------------
+
+## ⚙️ All Fitted Models
+
+```{r}
+cat(params$model_info)
+```
+
+------------------------------------------------------------------------
+
+## 🏆 Best Model Selection
+
+```{r}
+cat(params$best_model)
+```
+
+------------------------------------------------------------------------
+
+## 📉 Residual Diagnostics
+
+```{r}
+cat(params$residual_summary)
+```
+
+------------------------------------------------------------------------
+
+## 🔮 Forecasted Values
+
+```{r}
+cat(params$forecast_values)
+```
+
+------------------------------------------------------------------------
+
+## 📌 Notes
+
+This report is auto-generated using your uploaded time series dataset and selected parameters.
